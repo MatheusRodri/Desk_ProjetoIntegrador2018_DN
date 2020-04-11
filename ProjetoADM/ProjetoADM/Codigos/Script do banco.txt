@@ -1,0 +1,394 @@
+﻿drop database adm;
+
+CREATE SCHEMA IF NOT EXISTS `adm` ;
+USE `adm` ;
+
+-- -----------------------------------------------------
+-- Table `adm`.`tb_cliente`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`tb_cliente` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`tb_cliente` (
+  `id_cliente` INT NOT NULL AUTO_INCREMENT,
+  `nm_cliente` VARCHAR(80) NOT NULL,
+  `ds_email` varchar(70) not null,
+  `ds_ender` VARCHAR(40) NOT NULL,
+  `ds_numerocasa` INT(5) NOT NULL,
+  `ds_cep` varchar(15) NOT NULL,
+  `bairro` VARCHAR(45) NOT NULL,
+  `cidade` VARCHAR(45) NOT NULL,
+  `estado` VARCHAR(2) NOT NULL,
+  `ds_tele` varchar(15) NOT NULL,
+  `ds_cpf` varchar(15) NOT NULL,
+  `ds_rg` varchar(20) NOT NULL,
+  `ds_celular` varchar(20) NOT NULL,
+  `sexo` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`id_cliente`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`tb_funcionario`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`tb_funcionario` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`tb_funcionario` (
+  `id_funcionario` INT NOT NULL AUTO_INCREMENT,
+  `nm_funcio` VARCHAR(40) NOT NULL,
+  `ds_email` varchar(70) not null,
+  `ds_cep` VARCHAR(20) NOT NULL,
+  `ds_ender` VARCHAR(40) NOT NULL,
+  `ds_numerocasa` INT(5) NOT NULL,
+  `bairro` VARCHAR(45) NOT NULL,
+  `cidade` VARCHAR(45) NOT NULL,
+  `estado` VARCHAR(2) NOT NULL,
+  `ds_tele` INT(15) NOT NULL,
+  `ds_cpf` VARCHAR(15) NOT NULL,
+  `ds_rg` VARCHAR(15) NOT NULL,
+  `funcao` VARCHAR(25) NOT NULL,
+  `V_transporte` DECIMAL(20) NOT NULL,
+  `sala_liqui` DECIMAL(20) NOT NULL,
+  `vale_refeicao` DECIMAL(45) NOT NULL,
+  `nm_login` VARCHAR(30) NOT NULL,
+  `ds_senha` VARCHAR(30) NOT NULL,
+  `bt_permissao_adm` TINYINT NULL DEFAULT NULL,
+  `bt_permissao_rh` TINYINT NULL DEFAULT NULL,
+  `bt_permissao_func` TINYINT NULL DEFAULT NULL,
+  PRIMARY KEY (`id_funcionario`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`Fornecedor`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`Fornecedor` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`Fornecedor` (
+  `Id_fornecedor` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(40) NOT NULL,
+  `CNPJ` varchar(15) NOT NULL,
+  `endereco` VARCHAR(40) NOT NULL,
+  `numero` INT(2) NOT NULL,
+  `telefone` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`Id_fornecedor`));
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`tb_produto`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`tb_produto` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`tb_produto` (
+  `id_produto` INT NOT NULL AUTO_INCREMENT,
+  `nm_produto` VARCHAR(20) NOT NULL,
+  `dt_venci` DATETIME NOT NULL,
+  `id_fornecedor` INT NOT NULL,
+  PRIMARY KEY (`id_produto`),
+  INDEX `tb_produto_fk0` (`id_fornecedor` ASC) ,
+  CONSTRAINT `tb_produto_fk0`
+    FOREIGN KEY (`id_fornecedor`)
+    REFERENCES `adm`.`Fornecedor` (`Id_fornecedor`));
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`tb_estoque`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`tb_estoque` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`tb_estoque` (
+  `id_estoque` INT NOT NULL AUTO_INCREMENT,
+  `ds_quant` INT NOT NULL,
+  `id_produto` INT NOT NULL,
+  PRIMARY KEY (`id_estoque`),
+  INDEX `tb_estoque_fk0` (`id_produto` ASC) ,
+  CONSTRAINT `tb_estoque_fk0`
+    FOREIGN KEY (`id_produto`)
+    REFERENCES `adm`.`tb_produto` (`id_produto`));
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`folha_pagamento`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`folha_pagamento` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`folha_pagamento` (
+  `id_folha` INT NOT NULL AUTO_INCREMENT,
+  `hora_extra` decimal(6,2),
+  `atrasos` INT(20),
+  `faltas` INT(20) ,
+  `INSS` decimal(6,2) ,
+  `i_renda` decimal(6,2),
+  `FGTS` decimal(6,2) ,
+  `V_transporte` DECIMAL(6,2) ,
+  `sala_liqui` DECIMAL(6,2) ,
+`sala_bruto` decimal(6,2) ,
+  `vale_refeicao` DECIMAL(45) ,
+  `id_funcionario` INT NULL DEFAULT NULL,
+`dt_pagamento` datetime,
+  PRIMARY KEY (`id_folha`),
+  INDEX `folha_pagamento_fk0` (`id_funcionario` ASC) ,
+  CONSTRAINT `folha_pagamento_fk0`
+    FOREIGN KEY (`id_funcionario`)
+    REFERENCES `adm`.`tb_funcionario` (`id_funcionario`));
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`tb_pedido`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`tb_pedido` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`tb_pedido` (
+  `id_pedido` INT NOT NULL AUTO_INCREMENT,
+  `id_fornecedor` INT NOT NULL,
+  `id_produto` INT NOT NULL,  
+  `ds_valor` DECIMAL(5,2) NOT NULL,
+   `dt_pedido` datetime,
+  PRIMARY KEY (`id_pedido`),
+  INDEX `tb_pedido_fk1` (`id_produto` ASC) ,
+  INDEX `tb_pedido_fk0_idx` (`id_fornecedor` ASC) ,
+  CONSTRAINT `tb_pedido_fk0`
+    FOREIGN KEY (`id_fornecedor`)
+    REFERENCES `adm`.`Fornecedor` (`Id_fornecedor`),
+  CONSTRAINT `tb_pedido_fk1`
+    FOREIGN KEY (`id_produto`)
+    REFERENCES `adm`.`tb_produto` (`id_produto`));
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`tb_fluxo_de_caixa`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`tb_fluxo_de_caixa` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`tb_fluxo_de_caixa` (
+  `id_fluxo_de_caixa` INT NOT NULL AUTO_INCREMENT,
+  `total_de_entrada` DECIMAL(6,2) NOT NULL,
+  `data_de_entrada` VARCHAR(10) NOT NULL,
+  `data_de_saida` VARCHAR(10) NOT NULL,
+  `total_de_saida` DECIMAL(6,2) NOT NULL,
+  `id_pedido` INT NOT NULL,
+  PRIMARY KEY (`id_fluxo_de_caixa`),
+  INDEX `tb_fluxo_de_caixa_fk0` (`id_pedido` ASC) ,
+  CONSTRAINT `tb_fluxo_de_caixa_fk0`
+    FOREIGN KEY (`id_pedido`)
+    REFERENCES `adm`.`tb_pedido` (`id_pedido`));
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`tb_pedicli`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`tb_pedicli` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`tb_pedicli` (
+  `id_pedicli` INT NOT NULL AUTO_INCREMENT,
+  `id_pedido` INT NOT NULL,
+  `id_cliente` INT NOT NULL,
+  PRIMARY KEY (`id_pedicli`),
+  INDEX `tb_pedicli_fk0` (`id_pedido` ASC) ,
+  INDEX `tb_pedicli_fk1` (`id_cliente` ASC) ,
+  CONSTRAINT `tb_pedicli_fk0`
+    FOREIGN KEY (`id_pedido`)
+    REFERENCES `adm`.`tb_pedido` (`id_pedido`),
+  CONSTRAINT `tb_pedicli_fk1`
+    FOREIGN KEY (`id_cliente`)
+    REFERENCES `adm`.`tb_cliente` (`id_cliente`));
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`tratamentos`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`tratamentos` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`tratamentos` (
+  `id_tratamentos` INT NOT NULL AUTO_INCREMENT,
+  `nm_tratamento` VARCHAR(45) NOT NULL,
+  `ds_valor` DECIMAL(4,2) NOT NULL,
+  `duracao` int NOT NULL,
+  `tratamentoscol` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_tratamentos`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`marca_horario`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`marca_horario` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`marca_horario` (
+  `idmarca_horario` INT NOT NULL AUTO_INCREMENT,
+  `forma_de_pgto` VARCHAR(45) NOT NULL,
+  `ds_valor` DECIMAL(5,2) NOT NULL,
+  `data_marcada` DATETIME NOT NULL,
+  `fk_nomecli` INT NULL DEFAULT NULL,
+  `fk_funcionario` INT NULL DEFAULT NULL,
+  `fk_tratamento` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`idmarca_horario`),
+  INDEX `fk_cliente_idx` (`fk_nomecli` ASC) ,
+  INDEX `fk_funcionario_idx` (`fk_funcionario` ASC) ,
+  INDEX `fk_tratamento_idx` (`fk_tratamento` ASC) ,
+  CONSTRAINT `fk_cliente`
+    FOREIGN KEY (`fk_nomecli`)
+    REFERENCES `adm`.`tb_cliente` (`id_cliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_funcionario`
+    FOREIGN KEY (`fk_funcionario`)
+    REFERENCES `adm`.`tb_funcionario` (`id_funcionario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_tratamento`
+    FOREIGN KEY (`fk_tratamento`)
+    REFERENCES `adm`.`tratamentos` (`id_tratamentos`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `adm`.`tb_bate_ponto`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`tb_bate_ponto` ;
+
+CREATE TABLE IF NOT EXISTS `adm`.`tb_bate_ponto` (
+  `id_bate_ponto` INT NOT NULL AUTO_INCREMENT,
+  `data_entrada` DATETIME NOT NULL,
+  `Hora_entrada` DATETIME NOT NULL,
+  `Hora_almoco` DATETIME NOT NULL,
+  `Hora_volta` DATETIME NOT NULL,
+  `Hora_saida` DATETIME NOT NULL,
+  `Fk_func` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`id_bate_ponto`),
+  INDEX `Fk_func_idx` (`Fk_func` ASC),
+  CONSTRAINT `Fk_func`
+    FOREIGN KEY (`Fk_func`)
+    REFERENCES `adm`.`tb_funcionario` (`id_funcionario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+drop table tb_gastos;
+create table tb_gastos(
+id_gastos int primary key auto_increment,
+dt_gastos datetime,
+ds_valor decimal(6,2),
+ds_descricao varchar(30),
+ds_tipo varchar(30)
+);
+
+USE `adm` ;
+
+-- -----------------------------------------------------
+-- Placeholder table for view `adm`.`vm_sesao_cliente_func`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `adm`.`vm_sesao_cliente_func` (`nm_cliente` INT, `nm_tratamento` INT, `data_marcada` INT, `nm_funcio` INT);
+
+-- -----------------------------------------------------
+-- View `adm`.`vm_sesao_cliente_func`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `adm`.`vm_sesao_cliente_func`;
+DROP VIEW IF EXISTS `adm`.`vm_sesao_cliente_func` ;
+USE `adm`;
+ 
+ drop view vm_consultar_produto;
+
+create view vm_folha_pagamento as 
+select distinct tb_funcionario.nm_funcio,folha_pagamento.sala_liqui,folha_pagamento.sala_bruto
+from folha_pagamento
+join tb_funcionario
+on tb_funcionario.id_funcionario;
+
+create  OR REPLACE view vm_sesao_cliente_func as
+select marca_horario.idmarca_horario,tb_cliente.nm_cliente,tratamentos.nm_tratamento,marca_horario.data_marcada,tb_funcionario.nm_funcio,marca_horario.forma_de_pgto,marca_horario.ds_valor
+from marca_horario
+join tratamentos
+on tratamentos.id_tratamentos
+join tb_cliente
+on tb_cliente.id_cliente
+join tb_funcionario
+on tb_funcionario.id_funcionario;
+
+create view vm_consultar_pedido as 
+select tb_pedido.id_pedido,Fornecedor.nome,tb_produto.nm_produto,tb_pedido.ds_valor
+from tb_pedido
+join Fornecedor
+on Fornecedor.Id_fornecedor
+join tb_produto
+on  tb_produto.id_produto;
+
+create view vm_consultar_estoque as 
+select tb_estoque.id_estoque,tb_estoque.ds_quant,tb_produto.nm_produto
+from tb_estoque
+join tb_produto
+on tb_produto.id_produto;
+
+create view vm_consultar_produto as 
+select tb_produto.id_produto,tb_produto.nm_produto,tb_produto.dt_venci,Fornecedor.nome
+from tb_produto inner join Fornecedor
+on tb_produto.id_produto =Fornecedor.Id_fornecedor;
+
+select * from vm_sesao_cliente_func;
+
+-- VIEW DE GANHOS
+
+create view vw_ganhos as
+select date(data_marcada) dt_referencia,
+sum(ds_valor) vl_total
+from marca_horario pe
+group
+by date(data_marcada);
+
+-- VIEW DE DESPESAS COM FOLHA DE PAGAMENTO
+
+create view vw_despesas as
+select sum(vl_total) vl_total, dt_referencia
+from
+(
+select date(dt_pedido) dt_referencia,
+sum(ds_valor) vl_total
+from tb_pedido c
+group
+by date(dt_pedido)
+UNION
+select date(dt_gastos) dt_referencia,
+sum(ds_valor) vl_total
+from tb_gastos
+group
+by date(dt_gastos)
+UNION
+select date(dt_pagamento) dt_referencia,
+sum(sala_liqui) vl_total
+from folha_pagamento
+group
+by dt_pagamento)despesa
+GROUP BY dt_referencia;
+-- VIEW CORDENADORA QUE PUXA AS DUAS VIEW E FAZ A CONTA DO SALDO
+
+create view vw_consultar_fluxodecaixa as
+SELECT dt_referencia,
+ifnull(vl_total_ganhos, 0) vl_total_ganhos,
+ifnull(vl_total_despesas, 0) vl_total_despesas,
+ifnull(vl_total_ganhos - vl_total_despesas,0) vl_saldo
+FROM
+(
+SELECT g.dt_referencia,
+g.vl_total vl_total_ganhos,
+d.vl_total vl_total_despesas
+FROM vw_ganhos g
+LEFT JOIN vw_despesas d
+ON g.dt_referencia = d.dt_referencia
+UNION
+SELECT d.dt_referencia,
+g.vl_total vl_total_ganhos,
+d.vl_total vl_total_despesas
+FROM vw_ganhos g
+RIGHT JOIN vw_despesas d
+ON g.dt_referencia = d.dt_referencia
+) tb_Fluxo;
+
+select * from vw_consultar_fluxodecaixa;
+select * from tb_produto;
+select distinct * from vm_consultar_produto;
+select * from vm_sesao_cliente_func;
+select * from vm_consultar_estoque;
+select * from vm_consultar_pedido;
+select * from tb_cliente;
+select * from tb_funcionario;
