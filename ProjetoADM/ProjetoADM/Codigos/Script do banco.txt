@@ -265,8 +265,8 @@ CREATE TABLE IF NOT EXISTS `adm`.`tb_bate_ponto` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-drop table tb_gastos;
-create table tb_gastos(
+DROP TABLE IF EXISTS tb_gastos;
+CREATE TABLE IF NOT EXISTS tb_gastos(
 id_gastos int primary key auto_increment,
 dt_gastos datetime,
 ds_valor decimal(6,2),
@@ -288,13 +288,15 @@ DROP TABLE IF EXISTS `adm`.`vm_sesao_cliente_func`;
 DROP VIEW IF EXISTS `adm`.`vm_sesao_cliente_func` ;
 USE `adm`;
  
- drop view vm_consultar_produto;
+ DROP View IF EXISTS vm_consultar_produto;
 
 create view vm_folha_pagamento as 
 select distinct tb_funcionario.nm_funcio,folha_pagamento.sala_liqui,folha_pagamento.sala_bruto
 from folha_pagamento
 join tb_funcionario
 on tb_funcionario.id_funcionario;
+
+DROP view IF EXISTS vm_sesao_cliente_func;
 
 create  OR REPLACE view vm_sesao_cliente_func as
 select marca_horario.idmarca_horario,tb_cliente.nm_cliente,tratamentos.nm_tratamento,marca_horario.data_marcada,tb_funcionario.nm_funcio,marca_horario.forma_de_pgto,marca_horario.ds_valor
@@ -306,6 +308,8 @@ on tb_cliente.id_cliente
 join tb_funcionario
 on tb_funcionario.id_funcionario;
 
+DROP view IF EXISTS vm_consultar_pedido;
+
 create view vm_consultar_pedido as 
 select tb_pedido.id_pedido,Fornecedor.nome,tb_produto.nm_produto,tb_pedido.ds_valor
 from tb_pedido
@@ -314,11 +318,15 @@ on Fornecedor.Id_fornecedor
 join tb_produto
 on  tb_produto.id_produto;
 
+DROP view IF EXISTS vm_consultar_estoque;
+
 create view vm_consultar_estoque as 
 select tb_estoque.id_estoque,tb_estoque.ds_quant,tb_produto.nm_produto
 from tb_estoque
 join tb_produto
 on tb_produto.id_produto;
+
+DROP view IF EXISTS vm_consultar_produto;
 
 create view vm_consultar_produto as 
 select tb_produto.id_produto,tb_produto.nm_produto,tb_produto.dt_venci,Fornecedor.nome
@@ -328,7 +336,7 @@ on tb_produto.id_produto =Fornecedor.Id_fornecedor;
 select * from vm_sesao_cliente_func;
 
 -- VIEW DE GANHOS
-
+DROP view IF EXISTS vw_ganhos;
 create view vw_ganhos as
 select date(data_marcada) dt_referencia,
 sum(ds_valor) vl_total
@@ -337,6 +345,8 @@ group
 by date(data_marcada);
 
 -- VIEW DE DESPESAS COM FOLHA DE PAGAMENTO
+
+DROP view IF EXISTS vw_despesas;
 
 create view vw_despesas as
 select sum(vl_total) vl_total, dt_referencia

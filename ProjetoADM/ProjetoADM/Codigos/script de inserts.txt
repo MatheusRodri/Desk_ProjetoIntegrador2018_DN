@@ -1,9 +1,7 @@
 ﻿use adm;
 
-INSERT INTO tb_funcionario(nm_funcio,ds_email,ds_ender,ds_numerocasa,ds_cep,bairro,cidade,estado,ds_tele,ds_cpf,ds_rg,funcao,sala_liqui,V_transporte,vale_refeicao,vl_convenio,nm_login,ds_senha,bt_permissao_adm,bt_permissao_rh,bt_permissao_func) 
-                               VALUES ('ADM','adm25@adm.com.br','A','1','1','A','a','QA','1','1','1','adm','1','1','1','1','adm','12345','1','1','1');
+INSERT INTO tb_funcionario(nm_funcio,ds_email,ds_cep,ds_ender,ds_numerocasa,bairro,cidade,estado,ds_tele,ds_cpf,ds_rg,funcao,V_transporte,sala_liqui,vale_refeicao,nm_login,ds_senha,bt_permissao_adm,bt_permissao_rh,bt_permissao_func) 
+				   VALUES ('ADM','adm25@adm.com.br','1','rua a',250,'a','a','sp',454545,'252525','4564646','adm',20.8,5,52,'adm','123',1,1,1);
                               
 
 select * from  tb_funcionario;
-
-		
