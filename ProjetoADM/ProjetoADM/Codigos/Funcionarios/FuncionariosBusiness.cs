@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ProjetoADM.Codigos.Funcionarios
 {
@@ -14,7 +10,6 @@ namespace ProjetoADM.Codigos.Funcionarios
             FuncionariosDTO funcionariosDTO = db.Logar(login, senha);
 
             return funcionariosDTO;
-
         }
 
         public int Salvar(FuncionariosDTO dto)

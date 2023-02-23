@@ -138,3 +138,4 @@ C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\Projet
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.csproj.CopyComplete
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.exe
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.pdb
+C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.Telas.teste.resources

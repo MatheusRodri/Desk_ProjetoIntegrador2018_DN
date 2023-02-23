@@ -90,7 +90,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(709, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // toolStripMenuItem1
             // 
@@ -125,7 +124,6 @@
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
-            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
             // cadastrarFuncionarioToolStripMenuItem
             // 
@@ -149,7 +147,6 @@
             this.folhaDePagamentoToolStripMenuItem.Name = "folhaDePagamentoToolStripMenuItem";
             this.folhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.folhaDePagamentoToolStripMenuItem.Text = "Folha de pagamento";
-            this.folhaDePagamentoToolStripMenuItem.Click += new System.EventHandler(this.folhaDePagamentoToolStripMenuItem_Click);
             // 
             // adicionarToolStripMenuItem
             // 
@@ -180,7 +177,6 @@
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             this.produtoToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.produtoToolStripMenuItem.Text = "Produto";
-            this.produtoToolStripMenuItem.Click += new System.EventHandler(this.produtoToolStripMenuItem_Click);
             // 
             // adicionarProdutoToolStripMenuItem
             // 
@@ -273,7 +269,6 @@
             this.tratamentosToolStripMenuItem.Name = "tratamentosToolStripMenuItem";
             this.tratamentosToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.tratamentosToolStripMenuItem.Text = "Tratamentos";
-            this.tratamentosToolStripMenuItem.Click += new System.EventHandler(this.tratamentosToolStripMenuItem_Click);
             // 
             // cadastrarTratamentosToolStripMenuItem
             // 
@@ -379,7 +374,6 @@
             this.label1.Size = new System.Drawing.Size(472, 89);
             this.label1.TabIndex = 3;
             this.label1.Text = "Realce sua Beleza";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -410,7 +404,6 @@
             this.Name = "tela_principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.Load += new System.EventHandler(this.tela_principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

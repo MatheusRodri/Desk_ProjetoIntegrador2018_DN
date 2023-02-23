@@ -28,12 +28,7 @@ namespace ProjetoADM.Telas
           
         }
         IbmVoiceApi ibmApi = new IbmVoiceApi();
-        public void Bloaqueados()
-        {
-           
-        }
-
-
+       
         void Verificarpermi()
         {
             if(Usuario_Logado.UsuarioLogado.ADM == false)
@@ -54,32 +49,11 @@ namespace ProjetoADM.Telas
 
         
 
-
-        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cadastrarFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tratamentosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cadastrarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Funcionarios tela = new Funcionarios();
             tela.Show();
             this.Hide();
-        }
-
-        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void consultarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,10 +63,6 @@ namespace ProjetoADM.Telas
             this.Hide();
         }
 
-        private void folhaDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -120,11 +90,6 @@ namespace ProjetoADM.Telas
             Consutar_Produto tela = new Consutar_Produto();
             tela.ShowDialog();
             this.Hide();
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
 
         private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -184,18 +149,11 @@ namespace ProjetoADM.Telas
             this.Hide();
         }
 
-        private void tela_principal_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void baterPontoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Bater_Ponto Tela = new Bater_Ponto();
             Tela.ShowDialog();
             this.Hide(); 
-
-
         }
 
         private void fluxoDeCaixaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -210,11 +168,6 @@ namespace ProjetoADM.Telas
             frm_gastos tela = new frm_gastos();
             tela.Show();
             this.Hide();
-        }
-
-        private void adicionarProdutoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void consultarEstoqueToolStripMenuItem_Click(object sender, EventArgs e)
@@ -250,11 +203,6 @@ namespace ProjetoADM.Telas
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -273,7 +221,5 @@ namespace ProjetoADM.Telas
             tela.ShowDialog();
             Hide();
         }
-
-       
     }
 }

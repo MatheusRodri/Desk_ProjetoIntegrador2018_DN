@@ -1,11 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoADM.Codigos.BASE;
 using ProjetoADM.Codigos.View;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoADM.Codigos.Bater_ponto
 {
@@ -16,7 +12,7 @@ namespace ProjetoADM.Codigos.Bater_ponto
             string script = @"INSERT INTO tb_bate_ponto(Hora_entrada,Hora_almoco,Hora_volta,Hora_saida,data_entrada,Fk_func)
                                                VALUES(@Hora_entrada,@Hora_almoco,@Hora_volta,@Hora_saida,@data_entrada,@Fk_func)";
 
-                 List<MySqlParameter> parms = new List<MySqlParameter>();
+            List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Hora_entrada", dto.Hora_entrada));
             parms.Add(new MySqlParameter("Hora_almoco", dto.Hora_almoco));
             parms.Add(new MySqlParameter("Hora_volta", dto.Hora_almoco_volta));
