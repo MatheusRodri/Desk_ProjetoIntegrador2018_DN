@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|c:\\projects\\desk_projetointegrador2018_dn\\projetoadm\\projetoadm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|solutionrelative:projetoadm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\projetoadm\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|solutionrelative:projetoadm\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\projetoadm\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|solutionrelative:projetoadm\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Program.cs",
+              "RelativeDocumentMoniker": "ProjetoADM\\Program.cs",
+              "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Program.cs",
+              "RelativeToolTip": "ProjetoADM\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-02-23T20:11:45.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\packages.config",
+              "RelativeDocumentMoniker": "ProjetoADM\\packages.config",
+              "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\packages.config",
+              "RelativeToolTip": "ProjetoADM\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2023-02-23T20:11:43.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\App.config",
+              "RelativeDocumentMoniker": "ProjetoADM\\App.config",
+              "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\App.config",
+              "RelativeToolTip": "ProjetoADM\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2023-02-23T20:11:42.996Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

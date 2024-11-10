@@ -100,7 +100,6 @@ C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\bin\Debug\System
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\bin\Debug\System.Security.Principal.Windows.xml
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\bin\Debug\System.ValueTuple.xml
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.csproj.AssemblyReference.cache
-C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.csproj.SuggestedBindingRedirects.cache
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.Telas.Estoque.FRM_estoque.resources
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.Telas.Tela_cliente.Alterar_cliente.resources
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.Telas.Tela_controle.consultar_folha_de_pagamento.resources
@@ -135,7 +134,6 @@ C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\Projet
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.Telas.tela_principal.resources
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.csproj.GenerateResource.cache
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.csproj.CoreCompileInputs.cache
-C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.csproj.CopyComplete
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.exe
 C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.pdb
-C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.Telas.teste.resources
+C:\projects\Desk_ProjetoIntegrador2018_DN\ProjetoADM\ProjetoADM\obj\Debug\ProjetoADM.csproj.Up2Date
