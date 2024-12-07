@@ -11,7 +11,7 @@ namespace ProjetoADM.Codigos.BASE
     {
         public MySqlConnection Create()
         {
-            string connectionString = "server=LocalHost;database=adm;uid=root;password=camaro250302;sslmode=none";
+            string connectionString = "server=LocalHost;database=adm;uid=root;password=admin12345;sslmode=none";
             //string connectionString = "server=192.168.0.100;database=adm;uid=nsf;password=nsf@2018;sslmode=none";
             //string connectionString = "server=70.37.57.127;database=adm;uid=nsf;password=nsf@2018;sslmode=none";
 

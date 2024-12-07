@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|c:\\projects\\desk_projetointegrador2018_dn\\projetoadm\\projetoadm\\codigos\\base\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|solutionrelative:projetoadm\\codigos\\base\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|c:\\projects\\desk_projetointegrador2018_dn\\projetoadm\\projetoadm\\codigos\\script de inserts.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|solutionrelative:projetoadm\\codigos\\script de inserts.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|c:\\projects\\desk_projetointegrador2018_dn\\projetoadm\\projetoadm\\codigos\\script do banco.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|solutionrelative:projetoadm\\codigos\\script do banco.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|c:\\projects\\desk_projetointegrador2018_dn\\projetoadm\\projetoadm\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|solutionrelative:projetoadm\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|c:\\projects\\desk_projetointegrador2018_dn\\projetoadm\\projetoadm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CDD87BF-AA0B-42E5-B86D-90BB192F9250}|ProjetoADM\\ProjetoADM.csproj|solutionrelative:projetoadm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,46 +38,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Codigos\\BASE\\Connection.cs",
+              "RelativeDocumentMoniker": "ProjetoADM\\Codigos\\BASE\\Connection.cs",
+              "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Codigos\\BASE\\Connection.cs*",
+              "RelativeToolTip": "ProjetoADM\\Codigos\\BASE\\Connection.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAArwA0AAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T23:01:08.634Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "script de inserts.txt",
+              "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Codigos\\script de inserts.txt",
+              "RelativeDocumentMoniker": "ProjetoADM\\Codigos\\script de inserts.txt",
+              "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Codigos\\script de inserts.txt",
+              "RelativeToolTip": "ProjetoADM\\Codigos\\script de inserts.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-07T23:00:06.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Script do banco.txt",
+              "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Codigos\\Script do banco.txt",
+              "RelativeDocumentMoniker": "ProjetoADM\\Codigos\\Script do banco.txt",
+              "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Codigos\\Script do banco.txt",
+              "RelativeToolTip": "ProjetoADM\\Codigos\\Script do banco.txt",
+              "ViewState": "AgIAAHcBAAAAAAAAAAAuwJMBAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-07T22:59:24.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\README.md",
+              "RelativeDocumentMoniker": "ProjetoADM\\README.md",
+              "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\README.md",
+              "RelativeToolTip": "ProjetoADM\\README.md",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-12-07T22:29:12.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Program.cs",
               "RelativeDocumentMoniker": "ProjetoADM\\Program.cs",
               "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\Program.cs",
               "RelativeToolTip": "ProjetoADM\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2023-02-23T20:11:45.542Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "packages.config",
               "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\packages.config",
               "RelativeDocumentMoniker": "ProjetoADM\\packages.config",
               "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\packages.config",
               "RelativeToolTip": "ProjetoADM\\packages.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2023-02-23T20:11:43.996Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "App.config",
               "DocumentMoniker": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\App.config",
               "RelativeDocumentMoniker": "ProjetoADM\\App.config",
               "ToolTip": "C:\\projects\\Desk_ProjetoIntegrador2018_DN\\ProjetoADM\\ProjetoADM\\App.config",
               "RelativeToolTip": "ProjetoADM\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2023-02-23T20:11:42.996Z"
             }
